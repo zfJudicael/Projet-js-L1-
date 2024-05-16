@@ -1,0 +1,17 @@
+body{
+    background-color: lightblue;
+    text-align: center;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+input{
+    width: 80px;
+    margin: 5px auto;
+}
+
+#error{
+    color: red;
+}

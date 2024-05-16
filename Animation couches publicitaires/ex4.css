@@ -1,0 +1,33 @@
+body{
+    background-color: lightblue;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+#affiche_publicitaire{
+    width: 800px;
+    height: 300px;
+    margin: 50px auto;
+}
+
+img{
+    position: absolute;
+    width: 800px;
+    height: 300px;
+}
+
+@media  screen and (max-width:800px){
+
+    #affiche_publicitaire{
+        width: 400px;
+        height: 200px;
+    }
+
+    img{
+        width: 400px;
+        height: 150px;
+    }
+}

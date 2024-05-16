@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice 3</title>
+        <meta charset="UTF-8">
+        <style>
+            body{
+                background-color: lightblue;
+                text-align: center;
+            }
+
+            h2{
+                text-decoration: underline;
+            }
+
+            .resistances, .solU, .solI, #tension{
+                margin: 10px auto;
+                width: 50px;
+            }
+
+            div{
+                border: 1px solid black;
+                border-style: dashed;
+                width: 300px;
+                margin: 20px auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2>III-Calcul d'un circuit électrique</h2>
+        <p>Calcul I1, I2, I3, U1, U2, U3?</p>
+        <img src="./circuit.png" alt="circuit_electrique" width="390px" height="270px">
+        <form>
+            <label>R1:</label><input type="text" class="resistances">
+            <label>R2:</label><input type="text" class="resistances">
+            <label>R3:</label><input type="text" class="resistances">
+            <label>R4:</label><input type="text" class="resistances"><br>
+            <label>U:</label><input type="text" id="tension"><br>
+            <input type="button" value="Calculer" id="Calculer">
+            <input type="reset" value="Effacer"><br>
+
+            <div>
+                <label>U1:</label><input type="text" class="solU">
+                <label>U2:</label><input type="text" class="solU">
+                <label>U3:</label><input type="text" class="solU"><br>
+                <label>I1:</label><input type="text" class="solI">
+                <label>I2:</label><input type="text" class="solI">
+                <label>I3:</label><input type="text" class="solI">
+            </div>
+
+            <p style="color: red;" id="msgError"></p>
+        </form>
+    </body>
+    <script src="./ex3.js"></script>
+</html>

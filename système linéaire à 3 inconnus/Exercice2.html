@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice 2</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./Exo2.css">
+    </head>
+    <body>
+        <h2>II-Résoudre un SL à 3 inconnus par la methode Cramer</h2>
+        <p>Soit le système suivant:</p>
+        <p>a<sub>11</sub>x<sub>1</sub> + a<sub>12</sub>x<sub>2</sub> + a<sub>13</sub>x<sub>3</sub> = b<sub>1</sub></p>
+        <p>a<sub>21</sub>x<sub>1</sub> + a<sub>22</sub>x<sub>2</sub> + a<sub>23</sub>x<sub>3</sub> = b<sub>2</sub></p>
+        <p>a<sub>31</sub>x<sub>1</sub> + a<sub>32</sub>x<sub>2</sub> + a<sub>33</sub>x<sub>3</sub> = b<sub>3</sub></p>
+        <form>
+            <input type="text" class="a1"><label>x<sub>1</sub>+</label><input type="text" class="a1"><label>x<sub>2</sub>+</label><input type="text" class="a1"><span>x<sub>3</sub>=</span><input type="text" class="b"><br>
+            <input type="text" class="a2"><label>x<sub>1</sub>+</label><input type="text" class="a2"><label>x<sub>2</sub>+</label><input type="text" class="a2"><span>x<sub>3</sub>=</span><input type="text" class="b"><br>
+            <input type="text" class="a3"><label>x<sub>1</sub>+</label><input type="text" class="a3"><label>x<sub>2</sub>+</label><input type="text" class="a3"><span>x3<sub></sub>=</span><input type="text" class="b"><br>
+            <input type="button" value="Résoudre" id="res">
+            <input type="reset" value="Effacer" id="del"><br>
+            <label>x<sub>1</sub>=</label><input type="text" class="solution">
+            <label>x<sub>2</sub>=</label><input type="text" class="solution">
+            <label>x<sub>3</sub>=</label><input type="text" class="solution"><br>
+        </form>
+        <p id="error"></p>
+    </body>
+    <script src="./exercice2.js"></script>
+</html>

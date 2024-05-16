@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercices 1</title>
+        <meta charset="UTF-8">
+        <style>
+            body{
+                background-color: lightblue;
+                text-align: center;
+            }
+
+            h2{
+                text-decoration: underline;
+            }
+
+            input{
+                width: 100px;
+                margin: 20px auto;
+            }
+
+            #erreur{
+                color: red;
+            }
+
+        </style>
+    </head>
+
+    
+    <body>
+        <h2>Résoudre un trinôme Ax<sup>2</sup> + Bx + C = 0 dans R:</h2>
+        <form>
+            <label for="text">A:</label><input type="text" id="A">
+            <label for="text">B:</label><input type="text" id="B">
+            <label for="text">C:</label><input type="text" id="C"><br>
+            <input type="button" value="Résoudre" id="resoudre"><br>
+            <label for="text">x<sub>1</sub>:</label><input type="text" id="solution1">
+            <label for="text">x<sub>2</sub>:</label><input type="text" id="solution2"><br>
+            <input type="reset" value="Effacer" id="resetAll">
+        </form>
+        <p id="erreur"></p>
+        
+    </body>
+
+    <script>
+        var resoudre = document.getElementById ("resoudre");
+        var msg = document.getElementById("erreur");
+        var solution1 = document.getElementById("solution1");
+        var solution2 = document.getElementById("solution2");
+        var resetAll = document.getElementById("resetAll");
+
+        function resolution(){
+            var valeurA = document.getElementById("A").value;
+            var valeurB = document.getElementById("B").value;
+            var valeurC = document.getElementById("C").value;
+            var delta = ((valeurB * valeurB) - 4*(valeurA*valeurC));
+            var x1, x2;
+
+            if(isNaN(delta)){
+                msg.innerHTML = "Veuillez réessayez svp";
+                solution1.value = "";
+                solution2.value = "";
+            }else if(delta < 0){
+                msg.innerHTML = "L'équation n'admet pas de solution";
+                solution1.value = "";
+                solution2.value = "";
+            }else if(delta == 0){
+                x1 = (-valeurB)/(2 * valeurA);
+                solution1.value = x1;
+                solution2.value = "";
+                msg.innerHTML = "";
+            }else{
+                x1 = (-valeurB - Math.sqrt(delta))/(2*valeurA);
+                x2 = (-valeurB + Math.sqrt(delta))/(2*valeurA);
+                solution1.value = x1;
+                solution2.value = x2;
+                msg.innerHTML = "";
+            }
+        };
+
+        resoudre.onclick = function(){
+            var valeurA = document.getElementById("A").value;
+            var valeurB = document.getElementById("B").value;
+            var valeurC = document.getElementById("C").value;
+
+            if(valeurA == "" || valeurB == "" || valeurC == ""){
+                msg.innerHTML = "Veuillez remplir les cases svp";
+                solution1.value = "";
+                solution2.value = "";
+            }else{
+                resolution();
+            }
+        }
+
+        resetAll.onclick = function(){
+            msg.innerHTML = "";
+        }
+
+    </script>
+
+ 
+</html>
